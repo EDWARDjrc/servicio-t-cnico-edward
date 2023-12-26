@@ -1,0 +1,149 @@
+body {
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.979);
+    /* Ajusta el valor alfa según la transparencia deseada */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+
+
+h1 {
+    font-size: 2.5em;
+    color: #2C3E50;
+}
+
+h2 {
+    font-size: 2em;
+    color: #3498db;
+}
+
+
+
+.works-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #3498db;
+}
+
+.social-buttons a:hover {
+    color: #2980b9;
+}
+
+.work-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-images img {
+    width: calc(33.33% - 10px);
+    /* Calcula el ancho para tres imágenes con márgenes */
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.work-images img:last-child {
+    margin-right: 0;
+    /* Elimina el margen derecho del último elemento para evitar desbordamiento */
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #3498db;
+    position: relative;
+}
+
+.social-buttons a:hover {
+    color: #2980b9;
+}
+
+.social-buttons a[title]:hover:after {
+    content: attr(title);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.social-buttons a[title]:hover:after {
+    opacity: 1;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Cambia el tipo de letra a 'Helvetica Neue' o a otro de tu elección */
+    color: #333;
+    /* Cambia el color del texto según tus preferencias */
+    margin-bottom: 15px;
+}
+
+p:first-child::first-letter {
+    font-size: 2em;
+    /* Ajusta el tamaño de la primera letra para resaltarla */
+    color: #3498db;
+    /* Cambia el color de la primera letra según tus preferencias */
+    font-weight: bold;
+    /* Puedes añadir negrita para resaltar aún más */
+}
+
+p::before {
+    content: open-quote;
+    /* Agrega una comilla de apertura al principio del párrafo */
+    font-size: 1.5em;
+    color: #3498db;
+    margin-right: 5px;
+}
+
+p::after {
+    content: close-quote;
+    /* Agrega una comilla de cierre al final del párrafo */
+    font-size: 1.5em;
+    color: #3498db;
+    margin-left: 5px;
+}
